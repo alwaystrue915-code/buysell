@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.siteShell {
+  width: min(100%, 960px);
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 42px 54px 110px;
+  border-right: 1px solid rgba(255, 35, 35, 0.6);
+  border-left: 1px solid rgba(255, 35, 35, 0.6);
+  background:
+    radial-gradient(circle at 50% 16%, rgba(0, 255, 124, 0.05), transparent 23%),
+    #000;
+}
+
+.bottomSpace {
+  width: 100%;
+  min-height: 25vh;
+  background: #fff;
+}
+
+.heroArt {
+  display: block;
+  width: 395px;
+  max-width: 48vw;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow:
+    0 0 12px rgba(0, 255, 127, 0.46),
+    0 0 34px rgba(0, 255, 127, 0.26);
+}
+
+h1 {
+  margin: 67px 0 86px;
+  color: #ffd83b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 6vw, 72px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 210, 0, 0.18);
+  white-space: nowrap;
+}
+
+.joinButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 30px);
+  width: 82%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: clamp(14px, 3vw, 26px) clamp(16px, 5vw, 70px);
+  border: 3px solid #df1d1d;
+  border-radius: 115px 0 115px 0;
+  background: linear-gradient(100deg, #66ff00 0%, #7dff00 58%, #efffd7 100%);
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.15),
+    0 0 4px rgba(255, 0, 0, 0.35);
+  color: #030303;
+  font-size: clamp(18px, 4.5vw, 42px);
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tgIcon {
+  display: grid;
+  flex: 0 0 auto;
+  width: clamp(34px, 7vw, 58px);
+  height: clamp(34px, 7vw, 58px);
+  place-items: center;
+  border-radius: 50%;
+  background: #000;
+}
+
+.tgIcon svg {
+  display: block;
+  width: 56%;
+  height: 56%;
+}
+
+.buttonText {
+  flex: 0 0 auto;
+  letter-spacing: 0.02em;
+}
+
+.features {
+  margin: 57px 0 48px;
+  font-size: clamp(20px, 3vw, 36px);
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+}
+
+.features p {
+  margin: 4px 0;
+  white-space: nowrap;
+}
+
+.moneyEmoji,
+.rocketEmoji,
+.boltEmoji {
+  font-size: 0.82em;
+  vertical-align: 0.04em;
+}
+
+.second {
+  margin-top: 34px;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 28px 22px 72px;
+  }
+
+  .heroArt {
+    width: 44%;
+    max-width: 360px;
+  }
+
+  h1 {
+    margin: 42px 0 58px;
+    font-size: clamp(28px, 8vw, 46px);
+  }
+
+  .joinButton {
+    width: 80%;
+    border-width: 2px;
+  }
+
+  .features {
+    margin: 40px 0 35px;
+    font-size: clamp(18px, 4.8vw, 28px);
+    line-height: 1.55;
+  }
+
+  .second {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 460px) {
+  .page {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .heroArt {
+    width: 48%;
+  }
+
+  .joinButton {
+    width: 78%;
+    border-radius: 82px 0 82px 0;
+  }
+
+  .features {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 27px;
+    letter-spacing: 0;
+  }
+
+  .features {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 340px) {
+  .joinButton {
+    width: 92%;
+    gap: 8px;
+    padding: 12px 10px;
+    border-radius: 60px 0 60px 0;
+    font-size: 15px;
+  }
+
+  .tgIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Keep the complete landing page inside one fixed viewport. */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background: linear-gradient(to bottom, #000 0 75%, #fff 75% 100%);
+}
+
+.siteShell {
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(3px, 0.7svh, 8px);
+  width: 100%;
+  height: 75vh;
+  height: 75svh;
+  min-height: 0;
+  padding: clamp(8px, 1.4svh, 16px) clamp(14px, 5vw, 54px);
+}
+
+.bottomSpace {
+  width: 100%;
+  height: 25vh;
+  height: 25svh;
+  min-height: 0;
+}
+
+.heroArt {
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 48vw;
+  height: clamp(80px, 17svh, 160px);
+  max-height: 25%;
+}
+
+h1 {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: clamp(24px, 4svh, 42px);
+  line-height: 1;
+}
+
+.joinButton {
+  flex: 0 0 auto;
+  gap: clamp(8px, 1.8vw, 18px);
+  width: min(80%, 520px);
+  margin: 0;
+  padding: clamp(7px, 1.2svh, 12px) clamp(14px, 4vw, 42px);
+  border-width: 2px;
+  font-size: clamp(14px, 2.4svh, 24px);
+}
+
+.tgIcon {
+  width: clamp(26px, 4.8svh, 42px);
+  height: clamp(26px, 4.8svh, 42px);
+}
+
+.features {
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: clamp(14px, 2.2svh, 22px);
+  line-height: 1.35;
+}
+
+.features p {
+  margin: 1px 0;
+}
+
+.second {
+  margin-top: 0;
+}
+
+.brandBlock {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+  gap: clamp(2px, 0.5svh, 6px);
+}
+
+.brandBlock .heroArt {
+  width: auto;
+  height: clamp(64px, 14svh, 132px);
+  max-height: none;
+}
