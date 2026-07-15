@@ -1,6 +1,5 @@
-"use client";
-
-import { useEffect } from "react";
+import Image from "next/image";
+import AutoRedirect from "./auto-redirect";
 
 const TELEGRAM_URL = "https://t.me/+O2LPdVVunxVlNmU1";
 
@@ -35,24 +34,19 @@ function JoinButton({ second = false }: { second?: boolean }) {
 }
 
 export default function Home() {
-  useEffect(() => {
-    const redirectTimer = window.setTimeout(() => {
-      window.location.href = TELEGRAM_URL;
-    }, 4000);
-
-    return () => window.clearTimeout(redirectTimer);
-  }, []);
-
   return (
     <div className="siteShell">
+      <AutoRedirect href={TELEGRAM_URL} delay={4000} />
       <main className="page">
       <div className="brandBlock">
-        {/* The original remote artwork is kept to preserve the existing UI exactly. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           className="heroArt"
-          src="https://cdn.nexapk.in/image67.webp"
+          src="/hero.webp"
           alt="Wallet Earning"
+          width={800}
+          height={800}
+          preload
+          unoptimized
         />
       </div>
 
