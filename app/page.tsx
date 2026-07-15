@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+
 const TELEGRAM_URL = "https://t.me/+O2LPdVVunxVlNmU1";
 
 function TelegramIcon() {
@@ -31,6 +35,14 @@ function JoinButton({ second = false }: { second?: boolean }) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    const redirectTimer = window.setTimeout(() => {
+      window.location.href = TELEGRAM_URL;
+    }, 4000);
+
+    return () => window.clearTimeout(redirectTimer);
+  }, []);
+
   return (
     <div className="siteShell">
       <main className="page">
